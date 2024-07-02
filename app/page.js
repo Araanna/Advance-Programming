@@ -1,95 +1,66 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Button from "react-bootstrap/Button";
+import { Container, Row, Col } from "react-bootstrap";
+import "./style.css";
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <h1 className="red-color">Hello World!</h1>
+      <h1>Please Good to me.</h1>
+      <Image
+        src={"/assets/images/cyberpunk.png"}
+        alt="itsmela"
+        width={300}
+        height={200}
+      ></Image>
+      <br />
+      <Link href={"/about"}>About</Link>
+      <br />
+      <Link href={"/blogs"}>Blogs</Link>
+      <br />
+      <Link href={"/contact"}>Contact Us</Link>
+      <br />
+      <Link href={"/news"}>News</Link>
+      <br />
+
+      <Button variant="primary">Click me</Button>
+      <br />
+      <Container>
+        <h1>React Bootstrap </h1>
+        <Row>
+          <Col lg={2} style={{ backgroundColor: "red" }}>
+            r1 c1
+          </Col>
+          <Col
+            lg={8}
+            style={{ backgroundColor: "blue" }}
+            className="text-center"
           >
-            By{" "}
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+              src={"/assets/images/cat.gif"}
+              alt="cat"
+              height={200}
+              width={300}
+            ></Image>
+          </Col>
+          <Col lg={2} style={{ backgroundColor: "red" }}>
+            r1 c3
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={4} style={{ backgroundColor: "red" }}>
+            r1 c1
+          </Col>
+          <Col lg={8} style={{ backgroundColor: "blue" }}>
+            r1 c2
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
-}
+};
+
+export default Home;
