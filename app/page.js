@@ -4,10 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import { Container, Row, Col } from "react-bootstrap";
 import "./style.css";
+import Header from "../components/header.js";
 
 const Home = () => {
   return (
     <>
+      <Header />
       <h1 className="red-color">Hello World!</h1>
       <h1>Please Good to me.</h1>
       <Image
@@ -32,7 +34,7 @@ const Home = () => {
         <h1>React Bootstrap </h1>
         <Row>
           <Col lg={2} style={{ backgroundColor: "red" }}>
-            r1 c1
+            <Link href={"/about"}>About</Link>
           </Col>
           <Col
             lg={8}
